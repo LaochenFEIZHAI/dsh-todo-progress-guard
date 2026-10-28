@@ -4,6 +4,15 @@ All notable changes to this project are documented here.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.1] - 2026-10-28
+
+### Fixed
+
+- Documented the real install commands. `dsh plugin` is a pnpm passthrough
+  (`dsh plugin --profile <name> add <spec>`) and does not select bundles, so the
+  README now points at the Plugins page for the one-step install and explains
+  that the CLI path still needs the bundle enabled.
+
 ## [1.0.0] - 2026-10-28
 
 First public release.

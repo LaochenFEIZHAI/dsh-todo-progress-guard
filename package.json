@@ -1,6 +1,6 @@
 {
   "name": "dsh-todo-progress-guard",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "DSH host plugin that keeps todo_write progress in sync: it nudges the agent mid-turn and completes stranded tasks when a turn finishes normally.",
   "keywords": [
     "deepseek-harness",

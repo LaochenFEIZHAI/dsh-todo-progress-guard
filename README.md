@@ -66,21 +66,24 @@ open — any leftover `in_progress` / `pending` items are written back as `compl
 
 ## Install
 
-Install as a profile bundle (any of the three):
+**The Web UI is the recommended path**: open **Plugins → Install** and paste any spec below.
+It adds the dependency *and* selects the bundle, so the patch applies immediately with no restart:
 
-```bash
-# 1. straight from GitHub (this repository)
-dsh plugin install github:LaochenFEIZHAI/dsh-todo-progress-guard
-
-# 2. a local checkout (development; edits take effect immediately)
-dsh plugin install /absolute/path/to/dsh-todo-progress-guard
-
-# 3. from npm once published
-dsh plugin install dsh-todo-progress-guard
+```text
+github:LaochenFEIZHAI/dsh-todo-progress-guard   # straight from GitHub (this repository)
+/absolute/path/to/dsh-todo-progress-guard        # a local checkout; edits take effect immediately
+dsh-todo-progress-guard                          # from npm once published
 ```
 
-The same specs work in the Web UI under **Plugins → Install**. The bundle's `cordis.patch.yml`
-inserts one `todo-progress-guard` row, which is live immediately.
+**The CLI only installs the package** (`dsh plugin` is a pnpm passthrough and does not select bundles):
+
+```bash
+dsh plugin --profile web add github:LaochenFEIZHAI/dsh-todo-progress-guard
+```
+
+After that, enable `dsh-todo-progress-guard` once in the Plugins page (equivalent to adding it to
+`dsh.profile.bundles` in `~/.dsh/profiles/<name>/package.json`); only then is the bundle's
+`cordis.patch.yml` applied.
 
 ## Configuration
 

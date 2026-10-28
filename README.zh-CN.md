@@ -62,21 +62,24 @@ extra step cost, or mark every finished task `completed` before your final reply
 
 ## 安装
 
-作为 profile bundle 安装（三选一）：
+**推荐走 Web 界面**：打开 **插件 → 安装**，粘贴下面任意一个 spec。
+它会同时完成「装依赖」和「启用该 bundle」，patch 立即生效，不用重启：
 
-```bash
-# 方式一：直接从 GitHub 安装（本仓库）
-dsh plugin install github:LaochenFEIZHAI/dsh-todo-progress-guard
-
-# 方式二：本机目录（开发用，改动即时生效）
-dsh plugin install /absolute/path/to/dsh-todo-progress-guard
-
-# 方式三：发布到 npm 后
-dsh plugin install dsh-todo-progress-guard
+```text
+github:LaochenFEIZHAI/dsh-todo-progress-guard   # 直接从 GitHub（本仓库）
+/absolute/path/to/dsh-todo-progress-guard        # 本机目录，开发时改动即时生效
+dsh-todo-progress-guard                          # 发布到 npm 之后
 ```
 
-也可以在 Web 界面里通过 **插件 → 安装** 填入上面的 spec。安装后该 bundle 的
-`cordis.patch.yml` 会插入一行 `todo-progress-guard`，立即生效。
+**命令行只负责装包**（`dsh plugin` 是 pnpm 的透传，不做 bundle 选择）：
+
+```bash
+dsh plugin --profile web add github:LaochenFEIZHAI/dsh-todo-progress-guard
+```
+
+装完后还要在「插件」页把 `dsh-todo-progress-guard` 启用一次（等价于把它加进
+`~/.dsh/profiles/<name>/package.json` 的 `dsh.profile.bundles`），bundle 的
+`cordis.patch.yml` 才会被应用。
 
 ## 配置
 
