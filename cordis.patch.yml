@@ -1,0 +1,15 @@
+# Bundle patch for dsh-todo-progress-guard.
+#
+# The row id is stable; `name` must equal this package's `name` so the Loader
+# resolves the module from the profile's node_modules. Override `config` from a
+# later patch layer (the profile's own cordis.patch.yml) to tune the thresholds.
+- insert:
+    - id: todo-progress-guard
+      name: 'dsh-todo-progress-guard'
+      config:
+        # Remind after this many model steps without a todo_write.
+        stepThreshold: 2
+        # Remind after this many other tool calls without a todo_write.
+        callThreshold: 5
+        # Complete leftover in_progress/pending items when a turn finishes normally.
+        autoCompleteOnTurnEnd: true

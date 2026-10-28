@@ -1,0 +1,55 @@
+{
+  "name": "dsh-todo-progress-guard",
+  "version": "1.0.0",
+  "description": "DSH host plugin that keeps todo_write progress in sync: it nudges the agent mid-turn and completes stranded tasks when a turn finishes normally.",
+  "keywords": [
+    "deepseek-harness",
+    "deepseek-harness-plugin",
+    "dsh",
+    "dsh-plugin",
+    "dsh-bundle",
+    "cordis",
+    "todo",
+    "todo-write",
+    "task-progress",
+    "agent-loop"
+  ],
+  "homepage": "https://github.com/LaochenFEIZHAI/dsh-todo-progress-guard#readme",
+  "bugs": {
+    "url": "https://github.com/LaochenFEIZHAI/dsh-todo-progress-guard/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LaochenFEIZHAI/dsh-todo-progress-guard.git"
+  },
+  "license": "MIT",
+  "author": "DoubleChess",
+  "type": "module",
+  "icon": "./icon.svg",
+  "exports": {
+    ".": "./index.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "icon.svg",
+    "locale/*.json",
+    "README.md",
+    "README.zh-CN.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

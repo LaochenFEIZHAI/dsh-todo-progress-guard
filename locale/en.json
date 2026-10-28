@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Todo Progress Guard",
+    "description": "Reminds the agent to update todo_write task progress across multi-step tool calls and auto-completes remaining tasks when a turn finishes normally."
+  }
+}
