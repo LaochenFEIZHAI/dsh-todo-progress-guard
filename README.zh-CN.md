@@ -1,6 +1,6 @@
 # dsh-todo-progress-guard
 
-[English](README.md) | 中文
+[English](https://github.com/LaochenFEIZHAI/dsh-todo-progress-guard/blob/main/README.md) | 中文
 
 [![CI](https://github.com/LaochenFEIZHAI/dsh-todo-progress-guard/actions/workflows/ci.yml/badge.svg)](https://github.com/LaochenFEIZHAI/dsh-todo-progress-guard/actions/workflows/ci.yml)
 

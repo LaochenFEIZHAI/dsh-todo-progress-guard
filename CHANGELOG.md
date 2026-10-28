@@ -4,6 +4,17 @@ All notable changes to this project are documented here.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.2] - 2026-10-28
+
+### Fixed
+
+- Republished with `npm publish` so the registry packument carries `readme` and
+  `readmeFilename`. `pnpm publish` shipped a tarball that did contain
+  `README.md` but sent no readme metadata, which is why the npmjs.com README tab
+  rendered empty for 1.0.1.
+- Both READMEs now link to each other by absolute GitHub URL, so the language
+  switch works on npmjs.com where sibling files are not served.
+
 ## [1.0.1] - 2026-10-28
 
 ### Fixed
